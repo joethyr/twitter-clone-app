@@ -3,7 +3,7 @@ class ChirpsController < ApplicationController
 
   # GET /chirps or /chirps.json
   def index
-    @chirps = Chirp.all
+    @chirps = Chirp.all.order("created_at DESC")
     @chirp = Chirp.new
   end
 

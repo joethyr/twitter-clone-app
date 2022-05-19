@@ -4,6 +4,7 @@ class ChirpsController < ApplicationController
   # GET /chirps or /chirps.json
   def index
     @chirps = Chirp.all
+    @chirp = Chirp.new
   end
 
   # GET /chirps/1 or /chirps/1.json

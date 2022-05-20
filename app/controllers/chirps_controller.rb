@@ -1,5 +1,6 @@
 class ChirpsController < ApplicationController
   before_action :set_chirp, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /chirps or /chirps.json
   def index

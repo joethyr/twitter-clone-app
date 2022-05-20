@@ -1,10 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<%= render @chirp %>
+<p>
+  <strong>Chirp:</strong>
+  <%= @chirp.chirp %>
+</p>
 
-<div>
-  <%= link_to "Edit this chirp", edit_chirp_path(@chirp) %> |
-  <%= link_to "Back to chirps", chirps_path %>
-
-  <%= button_to "Destroy this chirp", @chirp, method: :delete %>
-</div>
+<%= link_to 'Edit', edit_chirp_path(@chirp) %> |
+<%= link_to 'Back', chirps_path %>
